@@ -1,8 +1,7 @@
-import throttle from 'lodash.throttle';
 import SimpleLightbox from 'simplelightbox';
-
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import { galleryItems } from './gallery-items';
+
 console.log(galleryItems);
 
 const galleryItemTemplate = ({ original, preview, description }) => {
@@ -22,6 +21,7 @@ const galleryMarkup = galleryItems.reduce((acc, item) => {
 }, '');
 
 galleryRef.insertAdjacentHTML('beforeend', galleryMarkup);
+
 const lightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionDelay: 250,

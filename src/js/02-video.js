@@ -1,13 +1,9 @@
-import throttle from 'lodash.throttle';
 import SimpleLightbox from 'simplelightbox';
-
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import Player from '@vimeo/player';
-
 import throttle from 'lodash.throttle';
 
 const currentTimeKey = 'videoplayer-current-time';
-
 const player = new Player('vimeo-player');
 
 const handleTimeUpdate = throttle(() => {
